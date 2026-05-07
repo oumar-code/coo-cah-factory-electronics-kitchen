@@ -1,5 +1,8 @@
 # Kitchen Electronics Factory — Digital Twin Architecture
 
+> **Group Platform Reference:** [Coo-Kah-Doks — platform/digital-twin-platform-architecture.md][group-dt-arch]
+> **Platform decision:** Hybrid Coo-Cah DT Engine (InfluxDB + FastAPI + Grafana + MQTT + OPC-UA connectors), with factory edge node + Rwanda cloud hub.
+>
 > **Project Coo-Cah | AI-Powered Manufacturing Ecosystem**
 > **Factory:** Coo-Cah Kitchen Electronics Factory | **Location:** Agbara Industrial Estate, Lagos State | **Phase:** Phase 1
 > **Document Version:** 1.0 | **Owner:** Smart Factory Core Team / Coo-Cah AI Platform Team
@@ -8,15 +11,23 @@
 
 ## 1. Overview
 
-The Kitchen Electronics Factory Digital Twin (DT) is a live synchronised virtual model of the physical factory, enabling real-time production visibility, predictive maintenance, energy optimisation, and simulation of process changes before physical implementation.
+The Kitchen Electronics Factory Digital Twin (DT) is a live synchronised virtual model
+of the physical factory, enabling real-time production visibility, predictive
+maintenance, energy optimisation, and simulation of process changes before physical
+implementation.
 
-The DT is an instance of the **Coo-Cah AI-Connected Factory Platform** (group-standard), hosted as a cloud service with a factory-edge node providing resilience against internet outages. The same DT engine is deployed at all Coo-Cah factories to enable group-wide benchmarking.
+The DT is an instance of the **Coo-Cah AI-Connected Factory Platform**
+(group-standard), aligned to the master DT platform document in Coo-Kah-Doks
+([platform/digital-twin-platform-architecture.md][group-dt-arch])
+and hosted as a cloud service with a factory-edge node providing resilience against
+internet outages. The same DT engine is deployed at all Coo-Cah factories to enable
+group-wide benchmarking.
 
 | Attribute | Value |
 |-----------|-------|
 | Platform | Coo-Cah Digital Twin Engine (group-standard platform) |
 | Deployment Model | Cloud (group visibility) + factory edge node (local resilience) |
-| MES Integration | Bidirectional REST API + event stream |
+| MES Integration | REST API + event stream; OT/DT write-back restricted by group architecture |
 | Telemetry Rate | Key machines: 1-second; energy meters: 1-minute; environment: 5-minute |
 | Assets in Phase 1 DT | SMT line, Refrigerator assembly, Gas charging zone, Energy systems |
 | Phase 2 Additions | Robot cells, AI QC camera feeds, all assembly line machines |
@@ -92,6 +103,8 @@ The DT is an instance of the **Coo-Cah AI-Connected Factory Platform** (group-st
     └─────────────┘  └─────────────┘  └─────────────────┘
 ```
 
+**Gate 1 note:** DT edge/cloud is read-only toward OT in Phase 1 and Phase 2. Any future write-back requires Phase 3 approval and safety review.
+
 ---
 
 ## 4. AI Models Deployed in the Digital Twin
@@ -163,3 +176,6 @@ Before a model changeover (e.g., switching from single-door to 2-door line), pro
 
 *For MES integration enabling the DT data feed, refer to [mes-integration.md](./mes-integration.md).*
 *For energy system configuration referenced in DT models, refer to [energy-profile.md](./energy-profile.md).*
+*For the authoritative group DT platform decision, refer to [Coo-Kah-Doks — platform/digital-twin-platform-architecture.md][group-dt-arch].*
+
+[group-dt-arch]: https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md
