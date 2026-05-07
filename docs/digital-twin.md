@@ -11,9 +11,17 @@
 
 ## 1. Overview
 
-The Kitchen Electronics Factory Digital Twin (DT) is a live synchronised virtual model of the physical factory, enabling real-time production visibility, predictive maintenance, energy optimisation, and simulation of process changes before physical implementation.
+The Kitchen Electronics Factory Digital Twin (DT) is a live synchronised virtual model
+of the physical factory, enabling real-time production visibility, predictive
+maintenance, energy optimisation, and simulation of process changes before physical
+implementation.
 
-The DT is an instance of the **Coo-Cah AI-Connected Factory Platform** (group-standard), aligned to the master DT platform document in Coo-Kah-Doks (<a href="https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md">platform/digital-twin-platform-architecture.md</a>) and hosted as a cloud service with a factory-edge node providing resilience against internet outages. The same DT engine is deployed at all Coo-Cah factories to enable group-wide benchmarking.
+The DT is an instance of the **Coo-Cah AI-Connected Factory Platform**
+(group-standard), aligned to the master DT platform document in Coo-Kah-Doks
+(<a href="https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md">platform/digital-twin-platform-architecture.md</a>)
+and hosted as a cloud service with a factory-edge node providing resilience against
+internet outages. The same DT engine is deployed at all Coo-Cah factories to enable
+group-wide benchmarking.
 
 | Attribute | Value |
 |-----------|-------|
