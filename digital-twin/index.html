@@ -1136,14 +1136,24 @@
 
 <h1 id="kitchen-electronics-factory-digital-twin-architecture">Kitchen Electronics Factory — Digital Twin Architecture<a class="headerlink" href="#kitchen-electronics-factory-digital-twin-architecture" title="Permanent link">&para;</a></h1>
 <blockquote>
+<p><strong>Group Platform Reference:</strong> <a href="https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md">Coo-Kah-Doks — platform/digital-twin-platform-architecture.md</a>
+<strong>Platform decision:</strong> Hybrid Coo-Cah DT Engine (InfluxDB + FastAPI + Grafana + MQTT + OPC-UA connectors), with factory edge node + Rwanda cloud hub.</p>
 <p><strong>Project Coo-Cah | AI-Powered Manufacturing Ecosystem</strong>
 <strong>Factory:</strong> Coo-Cah Kitchen Electronics Factory | <strong>Location:</strong> Agbara Industrial Estate, Lagos State | <strong>Phase:</strong> Phase 1
 <strong>Document Version:</strong> 1.0 | <strong>Owner:</strong> Smart Factory Core Team / Coo-Cah AI Platform Team</p>
 </blockquote>
 <hr />
 <h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
-<p>The Kitchen Electronics Factory Digital Twin (DT) is a live synchronised virtual model of the physical factory, enabling real-time production visibility, predictive maintenance, energy optimisation, and simulation of process changes before physical implementation.</p>
-<p>The DT is an instance of the <strong>Coo-Cah AI-Connected Factory Platform</strong> (group-standard), hosted as a cloud service with a factory-edge node providing resilience against internet outages. The same DT engine is deployed at all Coo-Cah factories to enable group-wide benchmarking.</p>
+<p>The Kitchen Electronics Factory Digital Twin (DT) is a live synchronised virtual model
+of the physical factory, enabling real-time production visibility, predictive
+maintenance, energy optimisation, and simulation of process changes before physical
+implementation.</p>
+<p>The DT is an instance of the <strong>Coo-Cah AI-Connected Factory Platform</strong>
+(group-standard), aligned to the master DT platform document in Coo-Kah-Doks
+(<a href="https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md">platform/digital-twin-platform-architecture.md</a>)
+and hosted as a cloud service with a factory-edge node providing resilience against
+internet outages. The same DT engine is deployed at all Coo-Cah factories to enable
+group-wide benchmarking.</p>
 <table>
 <thead>
 <tr>
@@ -1162,7 +1172,7 @@
 </tr>
 <tr>
 <td>MES Integration</td>
-<td>Bidirectional REST API + event stream</td>
+<td>REST API + event stream; OT/DT write-back restricted by group architecture</td>
 </tr>
 <tr>
 <td>Telemetry Rate</td>
@@ -1360,6 +1370,7 @@
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    │ Workstations│  │ AOI System  │  │ BESS BMS        │
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    └─────────────┘  └─────────────┘  └─────────────────┘
 </code></pre></div>
+<p><strong>Gate 1 note:</strong> DT edge/cloud is read-only toward OT in Phase 1 and Phase 2. Any future write-back requires Phase 3 approval and safety review.</p>
 <hr />
 <h2 id="4-ai-models-deployed-in-the-digital-twin">4. AI Models Deployed in the Digital Twin<a class="headerlink" href="#4-ai-models-deployed-in-the-digital-twin" title="Permanent link">&para;</a></h2>
 <h3 id="41-phase-1-ai-models">4.1 Phase 1 AI Models<a class="headerlink" href="#41-phase-1-ai-models" title="Permanent link">&para;</a></h3>
@@ -1514,7 +1525,8 @@
 </table>
 <hr />
 <p><em>For MES integration enabling the DT data feed, refer to <a href="../mes-integration/">mes-integration.md</a>.</em>
-<em>For energy system configuration referenced in DT models, refer to <a href="../energy-profile/">energy-profile.md</a>.</em></p>
+<em>For energy system configuration referenced in DT models, refer to <a href="../energy-profile/">energy-profile.md</a>.</em>
+<em>For the authoritative group DT platform decision, refer to <a href="https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md">Coo-Kah-Doks — platform/digital-twin-platform-architecture.md</a>.</em></p>
 
 
 
