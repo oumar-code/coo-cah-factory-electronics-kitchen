@@ -1,6 +1,6 @@
 # Kitchen Electronics Factory — Digital Twin Architecture
 
-> **Group Platform Reference:** [Coo-Kah-Doks — platform/digital-twin-platform-architecture.md](https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md)
+> **Group Platform Reference:** [Coo-Kah-Doks — platform/digital-twin-platform-architecture.md][group-dt-arch]
 > **Platform decision:** Hybrid Coo-Cah DT Engine (InfluxDB + FastAPI + Grafana + MQTT + OPC-UA connectors), with factory edge node + Rwanda cloud hub.
 >
 > **Project Coo-Cah | AI-Powered Manufacturing Ecosystem**
@@ -18,7 +18,7 @@ implementation.
 
 The DT is an instance of the **Coo-Cah AI-Connected Factory Platform**
 (group-standard), aligned to the master DT platform document in Coo-Kah-Doks
-([platform/digital-twin-platform-architecture.md](https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md))
+([platform/digital-twin-platform-architecture.md][group-dt-arch])
 and hosted as a cloud service with a factory-edge node providing resilience against
 internet outages. The same DT engine is deployed at all Coo-Cah factories to enable
 group-wide benchmarking.
@@ -176,4 +176,6 @@ Before a model changeover (e.g., switching from single-door to 2-door line), pro
 
 *For MES integration enabling the DT data feed, refer to [mes-integration.md](./mes-integration.md).*
 *For energy system configuration referenced in DT models, refer to [energy-profile.md](./energy-profile.md).*
-*For the authoritative group DT platform decision, refer to [Coo-Kah-Doks — platform/digital-twin-platform-architecture.md](https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md).*
+*For the authoritative group DT platform decision, refer to [Coo-Kah-Doks — platform/digital-twin-platform-architecture.md][group-dt-arch].*
+
+[group-dt-arch]: https://github.com/oumar-code/Coo-Kah-Doks/blob/main/platform/digital-twin-platform-architecture.md
