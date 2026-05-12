@@ -76,7 +76,7 @@ nav:
     - CapEx / OpEx: capex-opex.md
     - Digital Twin: digital-twin.md
     - MES Integration: mes-integration.md
-  - Gate 3 Readiness:
+  - Gate & Implementation Readiness:
     - Gap Closure Report: gap-closure-report.md
     - AI Platform Status: ai-platform-status.md
     - Penetration Test Scoping: pentest-scoping.md

@@ -172,7 +172,7 @@ See [docs/energy-profile.md](./energy-profile.md) for full demand analysis and c
 | [digital-twin.md](./digital-twin.md) | Asset registry, foam/reflow/gas DT models, energy monitoring |
 | [mes-integration.md](./mes-integration.md) | R600a gas traceability, serial numbers, OEE framework, API reference |
 
-### Implementation & Gate Readiness Documents
+### Gate & Implementation Readiness Documents
 
 | Document | Description |
 |---|---|
