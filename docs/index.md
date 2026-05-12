@@ -156,6 +156,8 @@ See [docs/energy-profile.md](./energy-profile.md) for full demand analysis and c
 
 ## Documentation Index
 
+### Core Factory Documents
+
 | Document | Description |
 |---|---|
 | [master-repo-ref.md](./master-repo-ref.md) | Master repo traceability, version reference, group standards |
@@ -164,10 +166,28 @@ See [docs/energy-profile.md](./energy-profile.md) for full demand analysis and c
 | [floor-plan.md](./floor-plan.md) | 15,000 m² layout: zones, flow paths, R600a gas zone, solar roof |
 | [automation-roadmap.md](./automation-roadmap.md) | Phase 1→3 automation strategy: MES, AMR, robotic foam injection, lights-out SDA |
 | [supply-chain.md](./supply-chain.md) | Component sourcing: compressors, magnetrons, plastics, packaging |
+| [intragroup-supply-coordination.md](./intragroup-supply-coordination.md) | Intragroup supply agreements: Plastics, Personal Electronics, Garage Power |
 | [regulatory.md](./regulatory.md) | SON NIS, IEC 60335, NESREA R600a, Pioneer Status |
 | [capex-opex.md](./capex-opex.md) | Phased CapEx, unit economics, BOM cost model, payback analysis |
 | [digital-twin.md](./digital-twin.md) | Asset registry, foam/reflow/gas DT models, energy monitoring |
 | [mes-integration.md](./mes-integration.md) | R600a gas traceability, serial numbers, OEE framework, API reference |
+
+### Implementation & Gate Readiness Documents
+
+| Document | Description |
+|---|---|
+| [../implementation-plan.md](../implementation-plan.md) | Phase 1 implementation plan: 6 workstreams, gate criteria, risk register |
+| [gap-closure-report.md](./gap-closure-report.md) | Gate readiness gap tracker: status of all machine-free and machine-required items |
+| [ai-platform-status.md](./ai-platform-status.md) | AI platform: 5 Phase 1 services, stub endpoints, go-live criteria, blockers |
+| [pentest-scoping.md](./pentest-scoping.md) | IT/OT penetration test scope, rules of engagement, Digital Encode Limited |
+| [sensor-map.md](./sensor-map.md) | Design-phase sensor registry: 143 sensors across all 17 zones |
+
+### BIM & Spatial Data
+
+| Document | Description |
+|---|---|
+| [bim/zone-boundaries.md](./bim/zone-boundaries.md) | 3D zone boundary coordinates for all 17 production zones (design-level; IFC pending) |
+| [bim/asset-anchors.md](./bim/asset-anchors.md) | Asset anchor coordinates for all key equipment and infrastructure (IFC pending) |
 
 ---
 
