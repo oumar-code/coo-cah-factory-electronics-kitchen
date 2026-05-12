@@ -64,16 +64,26 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Master Repo Reference: master-repo-ref.md
+  - Implementation Plan: implementation-plan.md
   - Factory Docs:
     - Machinery & Equipment: machinery.md
     - Energy Profile: energy-profile.md
     - Floor Plan: floor-plan.md
     - Automation Roadmap: automation-roadmap.md
     - Supply Chain: supply-chain.md
+    - Intragroup Supply Coordination: intragroup-supply-coordination.md
     - Regulatory & Compliance: regulatory.md
     - CapEx / OpEx: capex-opex.md
     - Digital Twin: digital-twin.md
     - MES Integration: mes-integration.md
+  - Gate & Implementation Readiness:
+    - Gap Closure Report: gap-closure-report.md
+    - AI Platform Status: ai-platform-status.md
+    - Penetration Test Scoping: pentest-scoping.md
+    - Sensor Registry: sensor-map.md
+    - BIM:
+      - Zone Boundaries: bim/zone-boundaries.md
+      - Asset Anchors: bim/asset-anchors.md
 
 extra:
   social:
