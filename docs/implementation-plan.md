@@ -247,7 +247,7 @@ S10 (Pentest executed) ─► S11 (AI platform production go-live) ─► G3
 
 ---
 
-*For factory layout and zone details, refer to [docs/floor-plan.md](./docs/floor-plan.md).*
-*For supply chain and intragroup links, refer to [docs/supply-chain.md](./docs/supply-chain.md).*
-*For gap closure tracking, refer to [docs/gap-closure-report.md](./docs/gap-closure-report.md).*
+*For factory layout and zone details, refer to [floor-plan.md](./floor-plan.md).*
+*For supply chain and intragroup links, refer to [supply-chain.md](./supply-chain.md).*
+*For gap closure tracking, refer to [gap-closure-report.md](./gap-closure-report.md).*
 *For master programme standards, refer to [oumar-code/Coo-Kah-Doks](https://github.com/oumar-code/Coo-Kah-Doks).*
