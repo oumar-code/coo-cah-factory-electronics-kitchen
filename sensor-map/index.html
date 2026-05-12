@@ -1,0 +1,3635 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tier 2 Consumer Electronics — Blueprint, operational docs & AI-integration specs for the Coo-Cah Kitchen Electronics Factory (Agbara/Sagamu, Lagos/Ogun State, Nigeria). Manufactures refrigerators, microwaves, electric cookers, blenders & domestic appliances.
+">
+      
+      
+      
+        <link rel="canonical" href="https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/sensor-map/">
+      
+      
+        <link rel="prev" href="../pentest-scoping/">
+      
+      
+        <link rel="next" href="../bim/zone-boundaries/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Sensor Registry - Coo-Cah Kitchen Electronics Factory</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kitchen-electronics-factory-sensor-registry-design-phase" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Coo-Cah Kitchen Electronics Factory" class="md-header__button md-logo" aria-label="Coo-Cah Kitchen Electronics Factory" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Coo-Cah Kitchen Electronics Factory
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sensor Registry
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/oumar-code/coo-cah-factory-electronics-kitchen" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    oumar-code/coo-cah-factory-electronics-kitchen
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../master-repo-ref/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Master Repo Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../implementation-plan/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Implementation Plan
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../machinery/" class="md-tabs__link">
+          
+  
+  
+  Factory Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../gap-closure-report/" class="md-tabs__link">
+          
+  
+  
+  Gate & Implementation Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Coo-Cah Kitchen Electronics Factory" class="md-nav__button md-logo" aria-label="Coo-Cah Kitchen Electronics Factory" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Coo-Cah Kitchen Electronics Factory
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/oumar-code/coo-cah-factory-electronics-kitchen" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    oumar-code/coo-cah-factory-electronics-kitchen
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-repo-ref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Repo Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementation-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factory Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Factory Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machinery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machinery & Equipment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../floor-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Floor Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supply-chain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supply Chain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intragroup-supply-coordination/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intragroup Supply Coordination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regulatory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatory & Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capex-opex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CapEx / OpEx
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital-twin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Twin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mes-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MES Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gate & Implementation Readiness
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gate & Implementation Readiness
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gap-closure-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gap Closure Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-platform-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Platform Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pentest-scoping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Penetration Test Scoping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensor Registry
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensor Registry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-id-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensor ID Convention
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sensor-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Sensor Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Sensor Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-zone-z1-raw-material-component-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Zone Z1 — Raw Material &amp; Component Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-zone-z2-smt-pcb-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Zone Z2 — SMT PCB Production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-zone-z3-sheet-metal-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Zone Z3 — Sheet Metal Fabrication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-zone-z4-refrigerator-assembly-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Zone Z4 — Refrigerator Assembly (Main)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-zone-z5-r600a-gas-charging-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Zone Z5 — R600a Gas Charging Zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-zone-z6-microwave-oven-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Zone Z6 — Microwave Oven Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-zone-z7-electric-cooker-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Zone Z7 — Electric Cooker Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-zone-z8-sda-assembly-lines-a-b-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Zone Z8 — SDA Assembly Lines A, B, C
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-zones-z9-z10-in-process-qc-final-qc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 Zones Z9 &amp; Z10 — In-Process QC &amp; Final QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-zones-z11-z12-packaging-finished-goods-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10 Zones Z11 &amp; Z12 — Packaging &amp; Finished Goods Warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-energy-utilities-cross-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11 Energy &amp; Utilities — Cross-Zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-zone-z16-it-mes-server-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12 Zone Z16 — IT / MES Server Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-safety-systems-all-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13 Safety Systems — All Zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-design-phase-registry-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Design-Phase Registry Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sensor-protocols-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sensor Protocols Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BIM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BIM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bim/zone-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zone Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bim/asset-anchors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Anchors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-id-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensor ID Convention
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sensor-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Sensor Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Sensor Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-zone-z1-raw-material-component-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Zone Z1 — Raw Material &amp; Component Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-zone-z2-smt-pcb-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Zone Z2 — SMT PCB Production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-zone-z3-sheet-metal-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Zone Z3 — Sheet Metal Fabrication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-zone-z4-refrigerator-assembly-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Zone Z4 — Refrigerator Assembly (Main)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-zone-z5-r600a-gas-charging-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Zone Z5 — R600a Gas Charging Zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-zone-z6-microwave-oven-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Zone Z6 — Microwave Oven Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-zone-z7-electric-cooker-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Zone Z7 — Electric Cooker Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-zone-z8-sda-assembly-lines-a-b-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Zone Z8 — SDA Assembly Lines A, B, C
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-zones-z9-z10-in-process-qc-final-qc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 Zones Z9 &amp; Z10 — In-Process QC &amp; Final QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-zones-z11-z12-packaging-finished-goods-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10 Zones Z11 &amp; Z12 — Packaging &amp; Finished Goods Warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-energy-utilities-cross-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11 Energy &amp; Utilities — Cross-Zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-zone-z16-it-mes-server-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12 Zone Z16 — IT / MES Server Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-safety-systems-all-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13 Safety Systems — All Zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-design-phase-registry-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Design-Phase Registry Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sensor-protocols-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sensor Protocols Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kitchen-electronics-factory-sensor-registry-design-phase">Kitchen Electronics Factory — Sensor Registry (Design Phase)<a class="headerlink" href="#kitchen-electronics-factory-sensor-registry-design-phase" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Project Coo-Cah | AI-Powered Manufacturing Ecosystem</strong>
+<strong>Factory:</strong> Coo-Cah Kitchen Electronics Factory | <strong>Factory ID:</strong> CCK-EL-KIT
+<strong>Document Version:</strong> 1.0 | <strong>Owner:</strong> Smart Factory Core Team
+<strong>Status:</strong> DESIGN-PHASE COMPLETE — Full commissioning registry (≥ 2,800 data points) to be populated from MES during factory commissioning</p>
+</blockquote>
+<hr />
+<h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<p>This document is the design-phase sensor registry for the Kitchen Electronics Factory. It defines all sensors, IoT data points, and monitored parameters required by the MES, Digital Twin, and AI Platform, derived from the approved factory design documentation.</p>
+<p><strong>Design-phase registry scope:</strong> All sensors identifiable from architectural drawings, machinery specifications, MES integration design, and the digital twin asset registry.</p>
+<p><strong>Production commissioning registry:</strong> The full production sensor registry (~2,800 data points, including every MES HMI parameter, PLC tag, energy sub-meter channel, and environmental sensor) will be populated into this document during MES commissioning (target: Q3–Q4 2026), using the MES tag export from Siemens Opcenter.</p>
+<h3 id="sensor-id-convention">Sensor ID Convention<a class="headerlink" href="#sensor-id-convention" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CCK-[ZoneCode]-[SensorType]-[NNN]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Zone Codes: Z1..Z17, EN (energy/utilities), SF (safety systems)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Sensor Types:
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  TMP = Temperature
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  HMD = Humidity
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  PRS = Pressure
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  FLW = Flow
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  VBR = Vibration
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  PWR = Power (kW/kWh)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  CUR = Current (A)
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  VLT = Voltage (V)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  GAS = Gas concentration
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  LVL = Level
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  SPD = Speed / belt speed
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  WGT = Weight / mass
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  CNT = Counter / cycle count
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  POS = Position (RFID/conveyor carrier)
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  OPT = Optical / vision pass/fail
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  ENV = Environmental (multi-parameter)
+</code></pre></div>
+<hr />
+<h2 id="2-sensor-registry">2. Sensor Registry<a class="headerlink" href="#2-sensor-registry" title="Permanent link">&para;</a></h2>
+<h3 id="21-zone-z1-raw-material-component-store">2.1 Zone Z1 — Raw Material &amp; Component Store<a class="headerlink" href="#21-zone-z1-raw-material-component-store" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z1-TMP-001</td>
+<td>Cold store sub-zone (ESD area)</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z1.ESD.Temp</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td>ESD zone spec: 20–25°C</td>
+</tr>
+<tr>
+<td>CCK-Z1-HMD-001</td>
+<td>Cold store sub-zone (ESD area)</td>
+<td>Relative humidity</td>
+<td>%RH</td>
+<td>MQTT</td>
+<td>Z1.ESD.RH</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td>ESD zone spec: 40–60%</td>
+</tr>
+<tr>
+<td>CCK-Z1-ENV-001</td>
+<td>Raw material store — north</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z1.RMS.Temp.N</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z1-ENV-002</td>
+<td>Raw material store — south</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z1.RMS.Temp.S</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z1-WGT-001</td>
+<td>Goods receipt weighbridge</td>
+<td>Component batch weight</td>
+<td>kg</td>
+<td>MQTT</td>
+<td>Z1.GR.Weight</td>
+<td>Per scan</td>
+<td>Goods receipt</td>
+<td>Tolerance check per PO</td>
+</tr>
+<tr>
+<td>CCK-Z1-CNT-001</td>
+<td>Incoming dock — barcode scanner #1</td>
+<td>Component scan count</td>
+<td>count</td>
+<td>RS-232→MES</td>
+<td>Z1.Dock1.Scans</td>
+<td>Per scan</td>
+<td>MES goods receipt</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z1-CNT-002</td>
+<td>Incoming dock — barcode scanner #2</td>
+<td>Component scan count</td>
+<td>count</td>
+<td>RS-232→MES</td>
+<td>Z1.Dock2.Scans</td>
+<td>Per scan</td>
+<td>MES goods receipt</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z1-ENV-003</td>
+<td>R600a cylinder sub-store</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z1.CylStore.Temp</td>
+<td>5 min</td>
+<td>EHS dashboard</td>
+<td>Max 30°C — NESREA limit</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="22-zone-z2-smt-pcb-production">2.2 Zone Z2 — SMT PCB Production<a class="headerlink" href="#22-zone-z2-smt-pcb-production" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z2-TMP-001</td>
+<td>SMT zone — HVAC supply air</td>
+<td>Supply air temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z2.HVAC.TempSupply</td>
+<td>1 min</td>
+<td>EMS module</td>
+<td>Spec: 22–24°C ±1°C</td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-002</td>
+<td>SMT zone — ambient (north)</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z2.Amb.Temp.N</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-003</td>
+<td>SMT zone — ambient (south)</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z2.Amb.Temp.S</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-HMD-001</td>
+<td>SMT zone — ambient (north)</td>
+<td>Relative humidity</td>
+<td>%RH</td>
+<td>MQTT</td>
+<td>Z2.Amb.RH.N</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td>Spec: 40–60%</td>
+</tr>
+<tr>
+<td>CCK-Z2-HMD-002</td>
+<td>SMT zone — ambient (south)</td>
+<td>Relative humidity</td>
+<td>%RH</td>
+<td>MQTT</td>
+<td>Z2.Amb.RH.S</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-004</td>
+<td>Reflow oven — Zone 1 (preheat)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone1.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05 (reflow profile)</td>
+<td>Profile monitoring</td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-005</td>
+<td>Reflow oven — Zone 2 (preheat)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone2.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-006</td>
+<td>Reflow oven — Zone 3 (soak)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone3.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-007</td>
+<td>Reflow oven — Zone 4 (soak)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone4.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-008</td>
+<td>Reflow oven — Zone 5 (reflow)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone5.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td>Peak zone</td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-009</td>
+<td>Reflow oven — Zone 6 (reflow)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone6.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td>Peak zone</td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-010</td>
+<td>Reflow oven — Zone 7 (cooling)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone7.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-TMP-011</td>
+<td>Reflow oven — Zone 8 (cooling)</td>
+<td>Oven zone temperature</td>
+<td>°C</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.Zone8.Temp</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-SPD-001</td>
+<td>Reflow oven — belt</td>
+<td>Belt speed</td>
+<td>m/min</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.BeltSpeed</td>
+<td>1 sec</td>
+<td>AI-SVC-05</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-FLW-001</td>
+<td>Reflow oven — N₂ supply</td>
+<td>N₂ flow rate</td>
+<td>l/min</td>
+<td>OPC-UA</td>
+<td>Z2.Reflow.N2Flow</td>
+<td>1 min</td>
+<td>EMS module</td>
+<td>N₂ consumption model</td>
+</tr>
+<tr>
+<td>CCK-Z2-CNT-001</td>
+<td>JUKI FX-3R P&amp;P — feeder</td>
+<td>Components placed per hour (CPH)</td>
+<td>CPH</td>
+<td>OPC-UA</td>
+<td>Z2.PnP1.CPH</td>
+<td>1 min</td>
+<td>MES production event</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-CNT-002</td>
+<td>JUKI FX-3R P&amp;P — vision error</td>
+<td>Vision error count</td>
+<td>count</td>
+<td>OPC-UA</td>
+<td>Z2.PnP1.VisionErrors</td>
+<td>Per event</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-CNT-003</td>
+<td>JUKI RX-7 P&amp;P — feeder</td>
+<td>CPH</td>
+<td>CPH</td>
+<td>OPC-UA</td>
+<td>Z2.PnP2.CPH</td>
+<td>1 min</td>
+<td>MES production event</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-CNT-004</td>
+<td>Koh Young 3D AOI</td>
+<td>Defect count per board</td>
+<td>count</td>
+<td>OPC-UA</td>
+<td>Z2.AOI.DefectCount</td>
+<td>Per board</td>
+<td>MES quality result</td>
+<td>SPC trigger</td>
+</tr>
+<tr>
+<td>CCK-Z2-CNT-005</td>
+<td>Koh Young SPI</td>
+<td>Paste volume deviation count</td>
+<td>count</td>
+<td>OPC-UA</td>
+<td>Z2.SPI.VolumeDeviation</td>
+<td>Per board</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z2-PWR-001</td>
+<td>SMT zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z2.Energy.kW</td>
+<td>15 min</td>
+<td>EMS + AI-SVC-01</td>
+<td>Energy per unit model</td>
+</tr>
+<tr>
+<td>CCK-Z2-PRS-001</td>
+<td>SMT zone — HVAC positive pressure</td>
+<td>Zone differential pressure</td>
+<td>Pa</td>
+<td>MQTT</td>
+<td>Z2.HVAC.DiffPressure</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td>Spec: +5 to +15 Pa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="23-zone-z3-sheet-metal-fabrication">2.3 Zone Z3 — Sheet Metal Fabrication<a class="headerlink" href="#23-zone-z3-sheet-metal-fabrication" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z3-CNT-001</td>
+<td>Roll-form line — press cycle counter</td>
+<td>Press cycle count</td>
+<td>count</td>
+<td>MQTT IoT GW</td>
+<td>Z3.RollForm.CycleCount</td>
+<td>Per cycle</td>
+<td>MES CMMS</td>
+<td>PM trigger at target cycles</td>
+</tr>
+<tr>
+<td>CCK-Z3-SPD-001</td>
+<td>Roll-form line — strip speed</td>
+<td>Strip feed speed</td>
+<td>m/min</td>
+<td>MQTT IoT GW</td>
+<td>Z3.RollForm.Speed</td>
+<td>10 sec</td>
+<td>MES production event</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z3-CNT-002</td>
+<td>Press brake — stroke counter</td>
+<td>Press stroke count</td>
+<td>count</td>
+<td>MQTT IoT GW</td>
+<td>Z3.Press.StrokeCount</td>
+<td>Per stroke</td>
+<td>MES CMMS</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z3-TMP-001</td>
+<td>Sheet metal zone — ambient</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z3.Amb.Temp</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z3-PWR-001</td>
+<td>Sheet metal zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z3.Energy.kW</td>
+<td>15 min</td>
+<td>EMS + AI-SVC-01</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z3-VBR-001</td>
+<td>Roll-form line — motor bearing</td>
+<td>Bearing vibration (X axis)</td>
+<td>mm/s</td>
+<td>MQTT</td>
+<td>Z3.RollForm.Motor.VibX</td>
+<td>10 sec</td>
+<td>MES CMMS (predictive)</td>
+<td>PM alert on trend</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="24-zone-z4-refrigerator-assembly-main">2.4 Zone Z4 — Refrigerator Assembly (Main)<a class="headerlink" href="#24-zone-z4-refrigerator-assembly-main" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z4-TMP-001</td>
+<td>PU foam injection — polyol feed</td>
+<td>Polyol temperature</td>
+<td>°C</td>
+<td>MQTT IoT GW</td>
+<td>Z4.Foam.Polyol.Temp</td>
+<td>10 sec</td>
+<td>AI-SVC-06 (Phase 2)</td>
+<td>Foam quality model input</td>
+</tr>
+<tr>
+<td>CCK-Z4-PRS-001</td>
+<td>PU foam injection — injection</td>
+<td>Injection pressure</td>
+<td>bar</td>
+<td>MQTT IoT GW</td>
+<td>Z4.Foam.InjPressure</td>
+<td>1 sec</td>
+<td>AI-SVC-06 (Phase 2)</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z4-FLW-001</td>
+<td>PU foam injection — polyol flow</td>
+<td>Polyol volumetric flow</td>
+<td>l/min</td>
+<td>MQTT IoT GW</td>
+<td>Z4.Foam.Polyol.Flow</td>
+<td>1 sec</td>
+<td>AI-SVC-06 (Phase 2)</td>
+<td>Ratio monitoring</td>
+</tr>
+<tr>
+<td>CCK-Z4-FLW-002</td>
+<td>PU foam injection — isocyanate flow</td>
+<td>Isocyanate volumetric flow</td>
+<td>l/min</td>
+<td>MQTT IoT GW</td>
+<td>Z4.Foam.ISO.Flow</td>
+<td>1 sec</td>
+<td>AI-SVC-06 (Phase 2)</td>
+<td>Ratio monitoring</td>
+</tr>
+<tr>
+<td>CCK-Z4-CNT-001</td>
+<td>PU foam injection — cycle count</td>
+<td>Injection cycle count</td>
+<td>count</td>
+<td>MQTT IoT GW</td>
+<td>Z4.Foam.CycleCount</td>
+<td>Per cycle</td>
+<td>MES CMMS</td>
+<td>PM trigger</td>
+</tr>
+<tr>
+<td>CCK-Z4-TMP-002</td>
+<td>Foam curing rack — ambient</td>
+<td>Cure ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z4.FoamCure.Temp</td>
+<td>5 min</td>
+<td>MES production event</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z4-SPD-001</td>
+<td>Overhead chain conveyor — belt speed</td>
+<td>Conveyor speed</td>
+<td>m/min</td>
+<td>OPC-UA</td>
+<td>Z4.Conv.Speed</td>
+<td>1 sec</td>
+<td>MES takt event</td>
+<td>Takt-linked</td>
+</tr>
+<tr>
+<td>CCK-Z4-CUR-001</td>
+<td>Overhead chain conveyor — drive motor</td>
+<td>Motor current draw</td>
+<td>A</td>
+<td>OPC-UA</td>
+<td>Z4.Conv.MotorCurrent</td>
+<td>10 sec</td>
+<td>MES CMMS</td>
+<td>Tension / wear indicator</td>
+</tr>
+<tr>
+<td>CCK-Z4-POS-001</td>
+<td>Overhead conveyor — carrier position (RFID)</td>
+<td>Carrier position tag</td>
+<td>RFID</td>
+<td>OPC-UA</td>
+<td>Z4.Conv.Carrier.Pos</td>
+<td>Per RFID read</td>
+<td>MES WIP tracking</td>
+<td>12 RFID readers on line</td>
+</tr>
+<tr>
+<td>CCK-Z4-VBR-001</td>
+<td>Overhead conveyor — drive unit</td>
+<td>Drive bearing vibration</td>
+<td>mm/s</td>
+<td>MQTT</td>
+<td>Z4.Conv.Drive.Vib</td>
+<td>30 sec</td>
+<td>MES CMMS</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z4-TMP-003</td>
+<td>Refrigerator assembly zone — ambient north</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z4.Amb.Temp.N</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z4-TMP-004</td>
+<td>Refrigerator assembly zone — ambient south</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z4.Amb.Temp.S</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z4-PWR-001</td>
+<td>Refrigerator assembly zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z4.Energy.kW</td>
+<td>15 min</td>
+<td>EMS + AI-SVC-01</td>
+<td>Foam injection peak: ~45 kW</td>
+</tr>
+<tr>
+<td>CCK-Z4-CNT-002</td>
+<td>Performance test station — unit counter</td>
+<td>Units tested</td>
+<td>count</td>
+<td>MQTT</td>
+<td>Z4.PerfTest.UnitCount</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z4-PWR-002</td>
+<td>Performance test station — power analyser</td>
+<td>Unit power draw during test</td>
+<td>W</td>
+<td>MQTT</td>
+<td>Z4.PerfTest.UnitPower</td>
+<td>1 min</td>
+<td>MES quality result</td>
+<td>IEC 62552 compliance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="25-zone-z5-r600a-gas-charging-zone">2.5 Zone Z5 — R600a Gas Charging Zone<a class="headerlink" href="#25-zone-z5-r600a-gas-charging-zone" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z5-GAS-001</td>
+<td>Gas zone — detector position 1 (SW floor)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D01.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm; MES gas module</td>
+<td>Alarm at 10% LEL; shutdown at 25% LEL</td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-002</td>
+<td>Gas zone — detector position 2 (SE floor)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D02.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-003</td>
+<td>Gas zone — detector position 3 (NE floor)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D03.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-004</td>
+<td>Gas zone — detector position 4 (NW floor)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D04.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-005</td>
+<td>Gas zone — detector position 5 (charging station 1)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D05.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm; MES gas module</td>
+<td>At charging station 1</td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-006</td>
+<td>Gas zone — detector position 6 (charging station 2)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D06.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm; MES gas module</td>
+<td>At charging station 2</td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-007</td>
+<td>Gas zone — detector position 7 (entry east)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D07.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td>Zone entry monitoring</td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-008</td>
+<td>Gas zone — detector position 8 (entry west)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D08.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-009</td>
+<td>Gas zone — detector position 9 (cylinder store N)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D09.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td>Near cylinder rack</td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-010</td>
+<td>Gas zone — detector position 10 (cylinder store S)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D10.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-011</td>
+<td>Gas zone — detector position 11 (vacuum area N)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D11.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-GAS-012</td>
+<td>Gas zone — detector position 12 (vacuum area S)</td>
+<td>R600a concentration</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>Z5.Gas.D12.LEL</td>
+<td>5 sec</td>
+<td>EHS alarm</td>
+<td>12th Draeger sensor (design count)</td>
+</tr>
+<tr>
+<td>CCK-Z5-WGT-001</td>
+<td>Gas charging station #1 — charge weight scale</td>
+<td>Refrigerant charge weight</td>
+<td>g</td>
+<td>OPC-UA</td>
+<td>Z5.CS1.ChargeWeight</td>
+<td>Per charge</td>
+<td>MES R600a gas module</td>
+<td>Linked to unit serial</td>
+</tr>
+<tr>
+<td>CCK-Z5-PRS-001</td>
+<td>Gas charging station #1 — cylinder pressure</td>
+<td>Cylinder inlet pressure</td>
+<td>bar</td>
+<td>OPC-UA</td>
+<td>Z5.CS1.CylPressure</td>
+<td>Per charge</td>
+<td>MES R600a gas module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-WGT-002</td>
+<td>Gas charging station #2 — charge weight scale</td>
+<td>Refrigerant charge weight</td>
+<td>g</td>
+<td>OPC-UA</td>
+<td>Z5.CS2.ChargeWeight</td>
+<td>Per charge</td>
+<td>MES R600a gas module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-PRS-002</td>
+<td>Gas charging station #2 — cylinder pressure</td>
+<td>Cylinder inlet pressure</td>
+<td>bar</td>
+<td>OPC-UA</td>
+<td>Z5.CS2.CylPressure</td>
+<td>Per charge</td>
+<td>MES R600a gas module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-PRS-003</td>
+<td>Vacuum pump #1 — vacuum level</td>
+<td>Final vacuum level</td>
+<td>micron</td>
+<td>OPC-UA</td>
+<td>Z5.VP1.VacuumLevel</td>
+<td>10 sec</td>
+<td>MES R600a gas module</td>
+<td>Spec: &lt; 200 microns</td>
+</tr>
+<tr>
+<td>CCK-Z5-TMP-001</td>
+<td>Vacuum pump #1 — exhaust</td>
+<td>Exhaust temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z5.VP1.ExhaustTemp</td>
+<td>30 sec</td>
+<td>MES CMMS</td>
+<td>Pump health</td>
+</tr>
+<tr>
+<td>CCK-Z5-PRS-004</td>
+<td>Vacuum pump #2 — vacuum level</td>
+<td>Final vacuum level</td>
+<td>micron</td>
+<td>OPC-UA</td>
+<td>Z5.VP2.VacuumLevel</td>
+<td>10 sec</td>
+<td>MES R600a gas module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-TMP-002</td>
+<td>Vacuum pump #2 — exhaust</td>
+<td>Exhaust temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z5.VP2.ExhaustTemp</td>
+<td>30 sec</td>
+<td>MES CMMS</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-PRS-005</td>
+<td>Gas zone — pressure decay test (unit-under-test)</td>
+<td>Pressure decay</td>
+<td>mbar</td>
+<td>OPC-UA</td>
+<td>Z5.LeakTest.PressDecay</td>
+<td>Per test</td>
+<td>MES R600a gas module</td>
+<td>Leak test pass/fail</td>
+</tr>
+<tr>
+<td>CCK-Z5-FLW-001</td>
+<td>Gas zone — ventilation fan flow</td>
+<td>Air flow rate (ventilation)</td>
+<td>m³/h</td>
+<td>MQTT</td>
+<td>Z5.Vent.AirFlow</td>
+<td>1 min</td>
+<td>EHS dashboard</td>
+<td>Min 15 ACH required</td>
+</tr>
+<tr>
+<td>CCK-Z5-TMP-003</td>
+<td>Gas zone — ambient temperature</td>
+<td>Zone ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z5.Amb.Temp</td>
+<td>1 min</td>
+<td>EHS dashboard</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z5-PWR-001</td>
+<td>Gas zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z5.Energy.kW</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="26-zone-z6-microwave-oven-assembly">2.6 Zone Z6 — Microwave Oven Assembly<a class="headerlink" href="#26-zone-z6-microwave-oven-assembly" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z6-CNT-001</td>
+<td>Microwave leak test station #1</td>
+<td>RF leakage test result</td>
+<td>mW/cm²</td>
+<td>MQTT</td>
+<td>Z6.LeakTest1.Leakage</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td>IEC 60335-2-25: ≤ 5 mW/cm²</td>
+</tr>
+<tr>
+<td>CCK-Z6-CNT-002</td>
+<td>Microwave leak test station #2</td>
+<td>RF leakage test result</td>
+<td>mW/cm²</td>
+<td>MQTT</td>
+<td>Z6.LeakTest2.Leakage</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z6-CNT-003</td>
+<td>Functional test station — power test</td>
+<td>Measured cooking power</td>
+<td>W</td>
+<td>MQTT</td>
+<td>Z6.FuncTest.CookPower</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z6-CNT-004</td>
+<td>Hipot test station #1 — hipot voltage</td>
+<td>Dielectric test voltage</td>
+<td>V</td>
+<td>MQTT</td>
+<td>Z6.Hipot1.Voltage</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td>IEC 60335-1 Cl.16</td>
+</tr>
+<tr>
+<td>CCK-Z6-TMP-001</td>
+<td>Microwave assembly zone — ambient</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z6.Amb.Temp</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z6-PWR-001</td>
+<td>Microwave zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z6.Energy.kW</td>
+<td>15 min</td>
+<td>EMS + AI-SVC-01</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="27-zone-z7-electric-cooker-assembly">2.7 Zone Z7 — Electric Cooker Assembly<a class="headerlink" href="#27-zone-z7-electric-cooker-assembly" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z7-CNT-001</td>
+<td>Induction efficiency test (Fluke 1760)</td>
+<td>Coil efficiency</td>
+<td>%</td>
+<td>MQTT</td>
+<td>Z7.IndEff.Efficiency</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z7-CNT-002</td>
+<td>Cooker function test — element temp calibration</td>
+<td>Element temperature accuracy</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z7.FuncTest.ElemTemp</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z7-CNT-003</td>
+<td>Hipot &amp; earth continuity — hipot result</td>
+<td>Test result (pass/fail)</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>Z7.Hipot.Result</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td>IEC 60335-2-6</td>
+</tr>
+<tr>
+<td>CCK-Z7-TMP-001</td>
+<td>Cooker assembly zone — ambient</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z7.Amb.Temp</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z7-PWR-001</td>
+<td>Cooker zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z7.Energy.kW</td>
+<td>15 min</td>
+<td>EMS + AI-SVC-01</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="28-zone-z8-sda-assembly-lines-a-b-c">2.8 Zone Z8 — SDA Assembly Lines A, B, C<a class="headerlink" href="#28-zone-z8-sda-assembly-lines-a-b-c" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z8-CNT-001</td>
+<td>SDA Line A — blender output counter</td>
+<td>Units completed (Line A)</td>
+<td>count</td>
+<td>MQTT</td>
+<td>Z8.LineA.UnitsOut</td>
+<td>Per unit</td>
+<td>MES production event</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z8-CNT-002</td>
+<td>SDA Line A — blender function test result</td>
+<td>Function test pass/fail</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>Z8.LineA.FuncTest</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td>Motor run + speed test</td>
+</tr>
+<tr>
+<td>CCK-Z8-CNT-003</td>
+<td>SDA Line B — kettle output counter</td>
+<td>Units completed (Line B)</td>
+<td>count</td>
+<td>MQTT</td>
+<td>Z8.LineB.UnitsOut</td>
+<td>Per unit</td>
+<td>MES production event</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z8-CNT-004</td>
+<td>SDA Line B — kettle auto-boil test result</td>
+<td>Boil-to-shutoff pass/fail</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>Z8.LineB.BoilTest</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td>Auto-shutoff at 100°C</td>
+</tr>
+<tr>
+<td>CCK-Z8-CNT-005</td>
+<td>SDA Line C — rice cooker output counter</td>
+<td>Units completed (Line C)</td>
+<td>count</td>
+<td>MQTT</td>
+<td>Z8.LineC.UnitsOut</td>
+<td>Per unit</td>
+<td>MES production event</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z8-CNT-006</td>
+<td>SDA hipot test — all lines</td>
+<td>Hipot test result</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>Z8.Hipot.Result</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td>IEC 60335 series</td>
+</tr>
+<tr>
+<td>CCK-Z8-TMP-001</td>
+<td>SDA zone — ambient north</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z8.Amb.Temp.N</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z8-TMP-002</td>
+<td>SDA zone — ambient south</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z8.Amb.Temp.S</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z8-PWR-001</td>
+<td>SDA zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z8.Energy.kW</td>
+<td>15 min</td>
+<td>EMS + AI-SVC-01</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="29-zones-z9-z10-in-process-qc-final-qc">2.9 Zones Z9 &amp; Z10 — In-Process QC &amp; Final QC<a class="headerlink" href="#29-zones-z9-z10-in-process-qc-final-qc" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z9-CNT-001</td>
+<td>Noise test booth #1 — fridge noise</td>
+<td>Operating noise level</td>
+<td>dBA</td>
+<td>MQTT</td>
+<td>Z9.NoiseTest1.dBA</td>
+<td>Per test</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z9-CNT-002</td>
+<td>Noise test booth #2 — fridge noise</td>
+<td>Operating noise level</td>
+<td>dBA</td>
+<td>MQTT</td>
+<td>Z9.NoiseTest2.dBA</td>
+<td>Per test</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z9-CNT-003</td>
+<td>IPQC hipot station — result</td>
+<td>Hipot pass/fail</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>Z9.Hipot.Result</td>
+<td>Per unit</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z10-PWR-001</td>
+<td>Final QC energy test bench (Yokogawa WT333)</td>
+<td>Unit energy consumption</td>
+<td>kWh/24h</td>
+<td>MQTT</td>
+<td>Z10.EnergyTest.kWh24h</td>
+<td>Per test</td>
+<td>MES quality result</td>
+<td>IEC 62552 compliance</td>
+</tr>
+<tr>
+<td>CCK-Z10-CNT-001</td>
+<td>OBA inspection station — sample result</td>
+<td>OBA sample pass/fail</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>Z10.OBA.SampleResult</td>
+<td>Per sample</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z9-TMP-001</td>
+<td>IPQC zone — ambient</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z9.Amb.Temp</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z10-TMP-001</td>
+<td>Final QC zone — ambient</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z10.Amb.Temp</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="210-zones-z11-z12-packaging-finished-goods-warehouse">2.10 Zones Z11 &amp; Z12 — Packaging &amp; Finished Goods Warehouse<a class="headerlink" href="#210-zones-z11-z12-packaging-finished-goods-warehouse" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z11-WGT-001</td>
+<td>Checkweigher #1 — packed fridge carton</td>
+<td>Packed carton weight</td>
+<td>kg</td>
+<td>MQTT</td>
+<td>Z11.CW1.Weight</td>
+<td>Per carton</td>
+<td>MES quality result</td>
+<td>Reject on ± spec</td>
+</tr>
+<tr>
+<td>CCK-Z11-WGT-002</td>
+<td>Checkweigher #2 — packed SDA carton</td>
+<td>Packed carton weight</td>
+<td>kg</td>
+<td>MQTT</td>
+<td>Z11.CW2.Weight</td>
+<td>Per carton</td>
+<td>MES quality result</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z11-OPT-001</td>
+<td>Barcode verifier #1 — label quality</td>
+<td>Barcode grade</td>
+<td>grade</td>
+<td>MQTT</td>
+<td>Z11.BCV1.Grade</td>
+<td>Per label</td>
+<td>MES label control</td>
+<td>Min grade: B (ISO 15415)</td>
+</tr>
+<tr>
+<td>CCK-Z11-OPT-002</td>
+<td>Barcode verifier #2 — label quality</td>
+<td>Barcode grade</td>
+<td>grade</td>
+<td>MQTT</td>
+<td>Z11.BCV2.Grade</td>
+<td>Per label</td>
+<td>MES label control</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z11-PWR-001</td>
+<td>Packaging zone — energy sub-meter</td>
+<td>Zone power consumption</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>Z11.Energy.kW</td>
+<td>15 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z12-TMP-001</td>
+<td>FGW — ambient north</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z12.Amb.Temp.N</td>
+<td>30 min</td>
+<td>EMS module</td>
+<td>Refrigerator storage temp</td>
+</tr>
+<tr>
+<td>CCK-Z12-TMP-002</td>
+<td>FGW — ambient south</td>
+<td>Ambient temperature</td>
+<td>°C</td>
+<td>MQTT</td>
+<td>Z12.Amb.Temp.S</td>
+<td>30 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z12-ENV-001</td>
+<td>FGW — ESFR sprinkler system</td>
+<td>Water flow alarm</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>Z12.Sprinkler.FlowAlarm</td>
+<td>On event</td>
+<td>Safety / EHS dashboard</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="211-energy-utilities-cross-zone">2.11 Energy &amp; Utilities — Cross-Zone<a class="headerlink" href="#211-energy-utilities-cross-zone" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-EN-PWR-001</td>
+<td>Solar PV array — inverter output #1</td>
+<td>DC generation power</td>
+<td>kW</td>
+<td>SCADA/MQTT</td>
+<td>EN.Solar.Inv1.kW</td>
+<td>1 min</td>
+<td>EMS + AI-SVC-04</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-002</td>
+<td>Solar PV array — inverter output #2</td>
+<td>DC generation power</td>
+<td>kW</td>
+<td>SCADA/MQTT</td>
+<td>EN.Solar.Inv2.kW</td>
+<td>1 min</td>
+<td>EMS + AI-SVC-04</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-003</td>
+<td>Solar PV array — inverter output #3</td>
+<td>DC generation power</td>
+<td>kW</td>
+<td>SCADA/MQTT</td>
+<td>EN.Solar.Inv3.kW</td>
+<td>1 min</td>
+<td>EMS + AI-SVC-04</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-004</td>
+<td>Solar PV array — inverter output #4</td>
+<td>DC generation power</td>
+<td>kW</td>
+<td>SCADA/MQTT</td>
+<td>EN.Solar.Inv4.kW</td>
+<td>1 min</td>
+<td>EMS + AI-SVC-04</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-TMP-001</td>
+<td>Solar PV array — panel temperature (sample)</td>
+<td>Panel surface temperature</td>
+<td>°C</td>
+<td>SCADA/MQTT</td>
+<td>EN.Solar.PanelTemp</td>
+<td>5 min</td>
+<td>AI-SVC-04</td>
+<td>Sample of 4 panel strings</td>
+</tr>
+<tr>
+<td>CCK-EN-LVL-001</td>
+<td>BESS — state of charge</td>
+<td>Battery SoC</td>
+<td>%</td>
+<td>BMS/MQTT</td>
+<td>EN.BESS.SoC</td>
+<td>1 min</td>
+<td>EMS + AI-SVC-04</td>
+<td>BMS: CATL/BYD native</td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-005</td>
+<td>BESS — charge/discharge power</td>
+<td>Charge (+) / Discharge (−) rate</td>
+<td>kW</td>
+<td>BMS/MQTT</td>
+<td>EN.BESS.ChargePower</td>
+<td>1 min</td>
+<td>EMS dispatch</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-TMP-002</td>
+<td>BESS — cell temperature (average)</td>
+<td>Cell pack average temperature</td>
+<td>°C</td>
+<td>BMS/MQTT</td>
+<td>EN.BESS.CellTemp.Avg</td>
+<td>5 min</td>
+<td>EMS + DT-EN-02</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-CNT-001</td>
+<td>BESS — cycle count</td>
+<td>Full equivalent charge cycles</td>
+<td>count</td>
+<td>BMS/MQTT</td>
+<td>EN.BESS.CycleCount</td>
+<td>Daily</td>
+<td>DT-EN-02 (SoH model)</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-006</td>
+<td>Grid connection — import/export</td>
+<td>Grid import (+) / export (−)</td>
+<td>kW</td>
+<td>SCADA/MQTT</td>
+<td>EN.Grid.Power</td>
+<td>1 min</td>
+<td>EMS</td>
+<td>Self-sufficiency KPI</td>
+</tr>
+<tr>
+<td>CCK-EN-VLT-001</td>
+<td>Grid connection — voltage</td>
+<td>Grid voltage</td>
+<td>V</td>
+<td>SCADA/MQTT</td>
+<td>EN.Grid.Voltage</td>
+<td>1 min</td>
+<td>EMS</td>
+<td>Power quality</td>
+</tr>
+<tr>
+<td>CCK-EN-FRQ-001</td>
+<td>Grid connection — frequency</td>
+<td>Grid frequency</td>
+<td>Hz</td>
+<td>SCADA/MQTT</td>
+<td>EN.Grid.Freq</td>
+<td>1 min</td>
+<td>EMS</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-007</td>
+<td>Diesel generator — output</td>
+<td>Generator output power</td>
+<td>kW</td>
+<td>MQTT</td>
+<td>EN.Gen.OutputkW</td>
+<td>1 min</td>
+<td>EMS + DT-EN-04</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-LVL-002</td>
+<td>Diesel generator — fuel tank</td>
+<td>Fuel tank level</td>
+<td>L</td>
+<td>MQTT</td>
+<td>EN.Gen.FuelLevel</td>
+<td>5 min</td>
+<td>EMS + DT-EN-04</td>
+<td>Reorder &lt; 500 L</td>
+</tr>
+<tr>
+<td>CCK-EN-CNT-002</td>
+<td>Diesel generator — runtime hours</td>
+<td>Accumulated run hours</td>
+<td>h</td>
+<td>MQTT</td>
+<td>EN.Gen.RunHours</td>
+<td>On start/stop</td>
+<td>MES CMMS</td>
+<td>Service at 500 h</td>
+</tr>
+<tr>
+<td>CCK-EN-PRS-001</td>
+<td>Compressed air — main header pressure</td>
+<td>System pressure</td>
+<td>bar</td>
+<td>MQTT</td>
+<td>EN.CA.Pressure</td>
+<td>1 min</td>
+<td>EMS + DT-EN-05</td>
+<td>Spec: 6.5–7.5 bar</td>
+</tr>
+<tr>
+<td>CCK-EN-FLW-001</td>
+<td>Compressed air — flow (main header)</td>
+<td>Compressed air flow rate</td>
+<td>m³/h</td>
+<td>MQTT</td>
+<td>EN.CA.Flow</td>
+<td>5 min</td>
+<td>EMS (leak rate model)</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-CNT-003</td>
+<td>Compressed air — compressor run hours</td>
+<td>Run hours (Compressor 1)</td>
+<td>h</td>
+<td>MQTT</td>
+<td>EN.CA.Comp1.RunH</td>
+<td>On start/stop</td>
+<td>MES CMMS</td>
+<td>Service at 4,000 h</td>
+</tr>
+<tr>
+<td>CCK-EN-CNT-004</td>
+<td>Compressed air — compressor run hours</td>
+<td>Run hours (Compressor 2)</td>
+<td>h</td>
+<td>MQTT</td>
+<td>EN.CA.Comp2.RunH</td>
+<td>On start/stop</td>
+<td>MES CMMS</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-008</td>
+<td>Factory total — main energy meter (MDB)</td>
+<td>Total factory power</td>
+<td>kW</td>
+<td>SCADA/MQTT</td>
+<td>EN.Factory.TotalPower</td>
+<td>15 min</td>
+<td>EMS / MES energy module</td>
+<td>Overall energy intensity KPI</td>
+</tr>
+<tr>
+<td>CCK-EN-PWR-009</td>
+<td>Factory total — daily energy</td>
+<td>Daily factory energy</td>
+<td>kWh</td>
+<td>SCADA/MQTT</td>
+<td>EN.Factory.DailykWh</td>
+<td>Daily</td>
+<td>EMS</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="212-zone-z16-it-mes-server-room">2.12 Zone Z16 — IT / MES Server Room<a class="headerlink" href="#212-zone-z16-it-mes-server-room" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-Z16-TMP-001</td>
+<td>Server room — CRAC supply</td>
+<td>Server room temperature</td>
+<td>°C</td>
+<td>SNMP/MQTT</td>
+<td>Z16.ServerRoom.Temp</td>
+<td>2 min</td>
+<td>IT monitoring</td>
+<td>Spec: 18–24°C</td>
+</tr>
+<tr>
+<td>CCK-Z16-HMD-001</td>
+<td>Server room — ambient</td>
+<td>Server room humidity</td>
+<td>%RH</td>
+<td>SNMP/MQTT</td>
+<td>Z16.ServerRoom.RH</td>
+<td>5 min</td>
+<td>IT monitoring</td>
+<td>Spec: 40–60%</td>
+</tr>
+<tr>
+<td>CCK-Z16-PWR-001</td>
+<td>Server room — UPS input</td>
+<td>Server room power consumption</td>
+<td>kW</td>
+<td>SNMP/MQTT</td>
+<td>Z16.UPS.InputkW</td>
+<td>5 min</td>
+<td>EMS module</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-Z16-ENV-001</td>
+<td>Server room — FM-200 system</td>
+<td>FM-200 discharge alarm</td>
+<td>bool</td>
+<td>SNMP/MQTT</td>
+<td>Z16.FM200.DischargeAlarm</td>
+<td>On event</td>
+<td>EHS + IT dashboard</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="213-safety-systems-all-zones">2.13 Safety Systems — All Zones<a class="headerlink" href="#213-safety-systems-all-zones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sensor ID</th>
+<th>Asset / Location</th>
+<th>Measurement</th>
+<th>Unit</th>
+<th>Protocol</th>
+<th>Tag Name</th>
+<th>Sample Rate</th>
+<th>MES Integration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CCK-SF-GAS-001</td>
+<td>R600a zone — composite alarm</td>
+<td>Highest zone gas alarm state</td>
+<td>% LEL</td>
+<td>OPC-UA</td>
+<td>SF.R600a.MaxLEL</td>
+<td>5 sec</td>
+<td>EHS dashboard; MES safety alert</td>
+<td>Computed max of Z5.Gas.D01–D12</td>
+</tr>
+<tr>
+<td>CCK-SF-ENV-001</td>
+<td>Factory-wide — fire alarm panel</td>
+<td>Fire alarm state</td>
+<td>bool</td>
+<td>Modbus/MQTT</td>
+<td>SF.Fire.AlarmState</td>
+<td>On event</td>
+<td>MES safety alert; EHS</td>
+<td>Notifier addressable panel</td>
+</tr>
+<tr>
+<td>CCK-SF-ENV-002</td>
+<td>Z5 — gas zone ESD button</td>
+<td>Emergency stop state</td>
+<td>bool</td>
+<td>OPC-UA</td>
+<td>SF.Z5.ESDButton</td>
+<td>On event</td>
+<td>MES safety alert; EHS</td>
+<td>Big red button — gas zone</td>
+</tr>
+<tr>
+<td>CCK-SF-ENV-003</td>
+<td>Z2 — SMT zone FM-200</td>
+<td>FM-200 discharge alarm</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>SF.Z2.FM200.Alarm</td>
+<td>On event</td>
+<td>MES safety alert; EHS</td>
+<td>SMT zone suppression</td>
+</tr>
+<tr>
+<td>CCK-SF-ENV-004</td>
+<td>Z16 — server room FM-200</td>
+<td>FM-200 discharge alarm</td>
+<td>bool</td>
+<td>MQTT</td>
+<td>SF.Z16.FM200.Alarm</td>
+<td>On event</td>
+<td>IT + EHS dashboard</td>
+<td></td>
+</tr>
+<tr>
+<td>CCK-SF-ENV-005</td>
+<td>Factory-wide — muster point status (×3)</td>
+<td>Evacuation muster count</td>
+<td>count</td>
+<td>MQTT</td>
+<td>SF.Muster.P1/P2/P3.Count</td>
+<td>On event</td>
+<td>EHS dashboard</td>
+<td>RFID badge scan at muster</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-design-phase-registry-summary">3. Design-Phase Registry Summary<a class="headerlink" href="#3-design-phase-registry-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Zone / Area</th>
+<th>Sensor Count (Design Phase)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z1 — Raw Material Store</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Z2 — SMT PCB Production</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Z3 — Sheet Metal Fabrication</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Z4 — Refrigerator Assembly</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Z5 — R600a Gas Charging</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Z6 — Microwave Assembly</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Z7 — Cooker Assembly</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Z8 — SDA Lines</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Z9 + Z10 — QC Zones</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Z11 + Z12 — Packaging / FGW</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Energy &amp; Utilities (EN)</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Z16 — IT / Server Room</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Safety Systems (SF)</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Total (Design Phase)</strong></td>
+<td><strong>143</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Production commissioning note:</strong> The design-phase registry above defines 143 primary measurement points. The full production sensor registry is expected to reach <strong>≥ 2,800 data points</strong> once all MES HMI station parameters, individual PLC I/O tags, energy sub-channel readings, and AMR telemetry points are exported from Siemens Opcenter during commissioning. This document will be updated in-place with the full commissioning export.</p>
+</blockquote>
+<hr />
+<h2 id="4-sensor-protocols-summary">4. Sensor Protocols Summary<a class="headerlink" href="#4-sensor-protocols-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Systems Using It</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPC-UA</td>
+<td>SMT machines (DEK, JUKI, Heller, Koh Young); gas charging PLCs; overhead conveyor PLC</td>
+<td>Industry standard for machine-MES integration</td>
+</tr>
+<tr>
+<td>MQTT (factory broker)</td>
+<td>All IoT sensors; energy meters; environmental sensors; safety systems</td>
+<td>HiveMQ Enterprise broker in Z16</td>
+</tr>
+<tr>
+<td>RS-232 / RS-485 → MQTT GW</td>
+<td>Legacy barcode scanners; older test equipment</td>
+<td>IoT gateway converts to MQTT</td>
+</tr>
+<tr>
+<td>SCADA (Modbus / DNP3)</td>
+<td>Solar inverters; BESS BMS; generator</td>
+<td>SCADA integrates to EMS</td>
+</tr>
+<tr>
+<td>SNMP</td>
+<td>Server room environment sensors; UPS</td>
+<td>IT standard monitoring</td>
+</tr>
+<tr>
+<td>Modbus TCP</td>
+<td>Fire alarm panel; selected energy meters</td>
+<td>Factory automation standard</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>For asset locations (anchor coordinates), refer to <a href="../bim/asset-anchors/">docs/bim/asset-anchors.md</a>.</em>
+<em>For zone boundary envelopes, refer to <a href="../bim/zone-boundaries/">docs/bim/zone-boundaries.md</a>.</em>
+<em>For MES API endpoints consuming sensor data, refer to <a href="../mes-integration/">docs/mes-integration.md</a>.</em>
+<em>For AI services consuming sensor streams, refer to <a href="../ai-platform-status/">docs/ai-platform-status.md</a>.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Coo-Cah Technologies Holdings. All rights reserved. | Part of the Coo-Cah Manufacturing Ecosystem.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/oumar-code/Coo-Kah-Doks" target="_blank" rel="noopener" title="Master Repository — Coo-Kah-Doks" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

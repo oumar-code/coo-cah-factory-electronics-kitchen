@@ -2,46 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/ai-platform-status/</loc>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/automation-roadmap/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/capex-opex/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/digital-twin/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/energy-profile/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/floor-plan/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/gap-closure-report/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/implementation-plan/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/intragroup-supply-coordination/</loc>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/machinery/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/master-repo-ref/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/mes-integration/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/pentest-scoping/</loc>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/regulatory/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/sensor-map/</loc>
+         <lastmod>2026-05-12</lastmod>
     </url>
     <url>
          <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/supply-chain/</loc>
-         <lastmod>2026-05-07</lastmod>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/bim/asset-anchors/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/bim/zone-boundaries/</loc>
+         <lastmod>2026-05-12</lastmod>
     </url>
 </urlset>

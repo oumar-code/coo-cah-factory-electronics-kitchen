@@ -1,0 +1,3451 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tier 2 Consumer Electronics — Blueprint, operational docs & AI-integration specs for the Coo-Cah Kitchen Electronics Factory (Agbara/Sagamu, Lagos/Ogun State, Nigeria). Manufactures refrigerators, microwaves, electric cookers, blenders & domestic appliances.
+">
+      
+      
+      
+        <link rel="canonical" href="https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/bim/zone-boundaries/">
+      
+      
+        <link rel="prev" href="../../sensor-map/">
+      
+      
+        <link rel="next" href="../asset-anchors/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Zone Boundaries - Coo-Cah Kitchen Electronics Factory</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kitchen-electronics-factory-bim-zone-boundaries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Coo-Cah Kitchen Electronics Factory" class="md-header__button md-logo" aria-label="Coo-Cah Kitchen Electronics Factory" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Coo-Cah Kitchen Electronics Factory
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Zone Boundaries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/oumar-code/coo-cah-factory-electronics-kitchen" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    oumar-code/coo-cah-factory-electronics-kitchen
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../master-repo-ref/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Master Repo Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../implementation-plan/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Implementation Plan
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../machinery/" class="md-tabs__link">
+          
+  
+  
+  Factory Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../gap-closure-report/" class="md-tabs__link">
+          
+  
+  
+  Gate & Implementation Readiness
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Coo-Cah Kitchen Electronics Factory" class="md-nav__button md-logo" aria-label="Coo-Cah Kitchen Electronics Factory" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Coo-Cah Kitchen Electronics Factory
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/oumar-code/coo-cah-factory-electronics-kitchen" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    oumar-code/coo-cah-factory-electronics-kitchen
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-repo-ref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Repo Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factory Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Factory Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machinery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machinery & Equipment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../energy-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../floor-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Floor Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../supply-chain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supply Chain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intragroup-supply-coordination/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intragroup Supply Coordination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regulatory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatory & Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capex-opex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CapEx / OpEx
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../digital-twin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Twin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mes-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MES Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gate & Implementation Readiness
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gate & Implementation Readiness
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gap-closure-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gap Closure Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-platform-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Platform Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pentest-scoping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Penetration Test Scoping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sensor-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensor Registry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BIM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BIM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zone Boundaries
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zone Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-factory-building-envelope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Factory Building Envelope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zone-boundary-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Zone Boundary Register
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Zone Boundary Register">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z1-raw-material-component-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z1 — Raw Material &amp; Component Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z2-smt-pcb-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z2 — SMT PCB Production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z3-refrigerator-sheet-metal-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z3 — Refrigerator Sheet Metal Fabrication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z4-refrigerator-assembly-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z4 — Refrigerator Assembly (Main)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z5-r600a-gas-charging-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z5 — R600a Gas Charging Zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z6-microwave-oven-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z6 — Microwave Oven Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z7-electric-cooker-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z7 — Electric Cooker Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z8-sda-assembly-lines-a-b-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z8 — SDA Assembly Lines (A, B, C)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z9-in-process-qc-ipqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z9 — In-Process QC (IPQC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z10-final-qc-outbound-quality-audit-oba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z10 — Final QC + Outbound Quality Audit (OBA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z11-packaging-labelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z11 — Packaging &amp; Labelling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z12-finished-goods-warehouse-fgw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z12 — Finished Goods Warehouse (FGW)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z13-maintenance-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z13 — Maintenance Workshop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z14-compressor-test-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z14 — Compressor &amp; Test Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z15-ehs-first-aid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z15 — EHS &amp; First Aid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z16-it-mes-server-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z16 — IT / MES Server Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z17-staff-facilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z17 — Staff Facilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-zone-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Zone Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ifc-delivery-update-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. IFC Delivery &amp; Update Procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-anchors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Anchors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-factory-building-envelope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Factory Building Envelope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zone-boundary-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Zone Boundary Register
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Zone Boundary Register">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z1-raw-material-component-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z1 — Raw Material &amp; Component Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z2-smt-pcb-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z2 — SMT PCB Production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z3-refrigerator-sheet-metal-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z3 — Refrigerator Sheet Metal Fabrication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z4-refrigerator-assembly-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z4 — Refrigerator Assembly (Main)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z5-r600a-gas-charging-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z5 — R600a Gas Charging Zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z6-microwave-oven-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z6 — Microwave Oven Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z7-electric-cooker-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z7 — Electric Cooker Assembly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z8-sda-assembly-lines-a-b-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z8 — SDA Assembly Lines (A, B, C)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z9-in-process-qc-ipqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z9 — In-Process QC (IPQC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z10-final-qc-outbound-quality-audit-oba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z10 — Final QC + Outbound Quality Audit (OBA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z11-packaging-labelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z11 — Packaging &amp; Labelling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z12-finished-goods-warehouse-fgw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z12 — Finished Goods Warehouse (FGW)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z13-maintenance-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z13 — Maintenance Workshop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z14-compressor-test-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z14 — Compressor &amp; Test Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z15-ehs-first-aid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z15 — EHS &amp; First Aid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z16-it-mes-server-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z16 — IT / MES Server Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z17-staff-facilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z17 — Staff Facilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-zone-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Zone Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ifc-delivery-update-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. IFC Delivery &amp; Update Procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kitchen-electronics-factory-bim-zone-boundaries">Kitchen Electronics Factory — BIM Zone Boundaries<a class="headerlink" href="#kitchen-electronics-factory-bim-zone-boundaries" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Project Coo-Cah | AI-Powered Manufacturing Ecosystem</strong>
+<strong>Factory:</strong> Coo-Cah Kitchen Electronics Factory | <strong>Factory ID:</strong> CCK-EL-KIT
+<strong>Document Version:</strong> 1.0 | <strong>Owner:</strong> Smart Factory Core Team / Facilities &amp; Engineering
+<strong>Status:</strong> DESIGN-LEVEL — IFC model delivery pending from architect</p>
+</blockquote>
+<hr />
+<h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<p>This document records the three-dimensional zone boundaries for all 17 production zones in the Kitchen Electronics Factory. Boundaries are used by the Digital Twin spatial model, the MES asset location system, and the AMR fleet navigation system.</p>
+<p><strong>Coordinate system:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Direction</th>
+<th>Reference point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>East (positive)</td>
+<td>SW corner of factory building = X:0</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>North (positive)</td>
+<td>SW corner of factory building = Y:0</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Up (positive)</td>
+<td>Finished floor level = Z:0</td>
+</tr>
+<tr>
+<td>Units</td>
+<td>Metres</td>
+<td>All coordinates in metres</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Important:</strong> Coordinates in this document are <strong>design-level estimates</strong> derived from architectural drawings and zone area data in <a href="../../floor-plan/">floor-plan.md</a>. They will be updated with <strong>IFC-model-exact coordinates</strong> upon delivery of the IFC file from the appointed architect.</p>
+<p>Fields marked <strong>[IFC-PENDING]</strong> require update after IFC delivery.</p>
+</blockquote>
+<hr />
+<h2 id="2-factory-building-envelope">2. Factory Building Envelope<a class="headerlink" href="#2-factory-building-envelope" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Building origin (SW corner)</td>
+<td>(0.0, 0.0, 0.0)</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Building footprint (E–W)</td>
+<td>120.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Building footprint (N–S)</td>
+<td>125.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Total floor area</td>
+<td>~15,000 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Eave height (production bays)</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Eave height (office / service areas)</td>
+<td>3.0–5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC model file</td>
+<td><code>CCK-EL-KIT-FACTORY-v1.ifc</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>IFC GUID (building element)</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-zone-boundary-register">3. Zone Boundary Register<a class="headerlink" href="#3-zone-boundary-register" title="Permanent link">&para;</a></h2>
+<h3 id="z1-raw-material-component-store">Z1 — Raw Material &amp; Component Store<a class="headerlink" href="#z1-raw-material-component-store" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z1</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Raw Material &amp; Component Store</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~1,500 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>95.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>125.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Racking; incoming QC bay; ESD-controlled sub-zone; 3 loading docks</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — inbound dock zone</td>
+<td></td>
+</tr>
+<tr>
+<td>ESD classification</td>
+<td>Sub-zone ESD controlled (Z1-ESD: X:40–50, Y:95–110)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z2-smt-pcb-production">Z2 — SMT PCB Production<a class="headerlink" href="#z2-smt-pcb-production" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z2</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>SMT PCB Production</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~1,200 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>90.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>97.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>125.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>ESD conductive flooring throughout; positive pressure HVAC; 22–24°C; 40–60% RH</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — SMT component replenishment</td>
+<td></td>
+</tr>
+<tr>
+<td>ESD classification</td>
+<td>Full ESD zone — conductive tiles; ioniser bars</td>
+<td></td>
+</tr>
+<tr>
+<td>HVAC zone</td>
+<td>Dedicated precision HVAC unit (Daikin)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z3-refrigerator-sheet-metal-fabrication">Z3 — Refrigerator Sheet Metal Fabrication<a class="headerlink" href="#z3-refrigerator-sheet-metal-fabrication" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z3</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Refrigerator Sheet Metal Fabrication</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~1,000 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>90.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>120.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>95.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>125.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Roll-form lines; press brake; overhead crane (5T)</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>No — forklift access only</td>
+<td></td>
+</tr>
+<tr>
+<td>Overhead crane envelope</td>
+<td>X:90–120, Y:95–125, Z:0–8.5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z4-refrigerator-assembly-main">Z4 — Refrigerator Assembly (Main)<a class="headerlink" href="#z4-refrigerator-assembly-main" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z4</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Refrigerator Assembly — Main</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~2,200 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>100.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>73.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>95.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Overhead Power &amp; Free chain conveyor (60m loop); 12 stop-stations; PU foam injection station</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — component kitting inbound; passes through Z4 east aisle</td>
+<td></td>
+</tr>
+<tr>
+<td>Overhead conveyor envelope</td>
+<td>X:5–95, Y:75–93, Z:2.5–3.5 (conveyor rail height)</td>
+<td></td>
+</tr>
+<tr>
+<td>Phase 2 robot cell provision</td>
+<td>X:20–50, Y:78–90 (pre-allocated floor space)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z5-r600a-gas-charging-zone">Z5 — R600a Gas Charging Zone<a class="headerlink" href="#z5-r600a-gas-charging-zone" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z5</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>R600a Gas Charging Zone</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~600 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>30.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>70.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>ATEX Zone 2 (below 0.5 m AFF); negative-pressure ventilation; 12 gas detectors; sealed floor</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>No — AMR excluded from gas zone</td>
+<td></td>
+</tr>
+<tr>
+<td>ATEX classification</td>
+<td>Zone 2 (&lt; 0.5 m AFF) — ATEX-certified all equipment</td>
+<td></td>
+</tr>
+<tr>
+<td>Ventilation</td>
+<td>Forced negative pressure; min 15 air changes/hour; ATEX fans</td>
+<td></td>
+</tr>
+<tr>
+<td>Access control</td>
+<td>Interlocked door; ESD verification pad at entry</td>
+<td></td>
+</tr>
+<tr>
+<td>Buffer zone</td>
+<td>1.5 m exclusion corridor on all four sides — no ignition sources</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z6-microwave-oven-assembly">Z6 — Microwave Oven Assembly<a class="headerlink" href="#z6-microwave-oven-assembly" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z6</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Microwave Oven Assembly</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~800 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>86.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>72.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Cavity press; spot weld station; hi-pot and RF leakage test bays</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — SDA/MW component kitting</td>
+<td></td>
+</tr>
+<tr>
+<td>RF shielding</td>
+<td>Hi-pot test bay screened (Faraday enclosure)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z7-electric-cooker-assembly">Z7 — Electric Cooker Assembly<a class="headerlink" href="#z7-electric-cooker-assembly" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z7</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Electric Cooker Assembly</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~700 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>86.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>117.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>72.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Induction coil winding station; glass surface bonding; cooker safety test rig</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — component kitting</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z8-sda-assembly-lines-a-b-c">Z8 — SDA Assembly Lines (A, B, C)<a class="headerlink" href="#z8-sda-assembly-lines-a-b-c" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z8</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>SDA Assembly Lines A, B, C</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~1,800 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>82.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>36.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>58.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>3 parallel production lines; blenders (Line A), kettles/toasters (Line B), rice cookers (Line C)</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — SDA component kitting; WIP to Z9</td>
+<td></td>
+</tr>
+<tr>
+<td>Phase 3 provision</td>
+<td>Lights-out conveyor conversion space reserved (Line A east section)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z9-in-process-qc-ipqc">Z9 — In-Process QC (IPQC)<a class="headerlink" href="#z9-in-process-qc-ipqc" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z9</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>In-Process QC (IPQC)</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~600 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>33.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>18.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>36.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Noise test booths (fridges); safety/hi-pot test; visual inspection; refrigerator performance test rack</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — WIP pass-through to Z11</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z10-final-qc-outbound-quality-audit-oba">Z10 — Final QC + Outbound Quality Audit (OBA)<a class="headerlink" href="#z10-final-qc-outbound-quality-audit-oba" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z10</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Final QC + OBA</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~700 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>33.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>73.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>18.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>36.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>OBA sampling station; energy efficiency test bench (Yokogawa WT333); warranty label printer</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z11-packaging-labelling">Z11 — Packaging &amp; Labelling<a class="headerlink" href="#z11-packaging-labelling" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z11</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Packaging &amp; Labelling</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~900 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>73.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>120.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>18.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>39.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>6.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Automatic carton erector (large + small); carton sealer; inline label printer/applicator; checkweigher</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — FG pallet build; dispatch to Z12</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z12-finished-goods-warehouse-fgw">Z12 — Finished Goods Warehouse (FGW)<a class="headerlink" href="#z12-finished-goods-warehouse-fgw" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z12</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Finished Goods Warehouse</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~2,200 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>120.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>18.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>9.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Selective pallet racking; 4 dispatch bays; ESFR sprinkler system; 4 loading dock doors</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>Yes — FG putaway; dispatch staging</td>
+<td></td>
+</tr>
+<tr>
+<td>Racking height</td>
+<td>Up to 7.5 m (3 levels); forklift required above level 2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z13-maintenance-workshop">Z13 — Maintenance Workshop<a class="headerlink" href="#z13-maintenance-workshop" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z13</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Maintenance Workshop</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~400 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>100.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>120.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>73.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>93.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Tool room; spare parts store; welding bay (local exhaust ventilation)</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z14-compressor-test-services">Z14 — Compressor &amp; Test Services<a class="headerlink" href="#z14-compressor-test-services" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z14</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Compressor &amp; Test Services</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~400 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>30.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>50.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>70.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>5.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Refrigerant recovery unit; nitrogen leak test; compressor performance test rig</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z15-ehs-first-aid">Z15 — EHS &amp; First Aid<a class="headerlink" href="#z15-ehs-first-aid" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z15</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>EHS &amp; First Aid</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~200 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>3.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>100.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>120.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>93.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>103.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>3.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>First aid room; eyewash station; EHS officer office; SDS binder</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z16-it-mes-server-room">Z16 — IT / MES Server Room<a class="headerlink" href="#z16-it-mes-server-room" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z16</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>IT / MES Server Room</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~100 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>3.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>100.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>110.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>103.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>113.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>3.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>MES edge node servers; InfluxDB server; network core switches; MQTT broker node; FM-200 suppression</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>Access control</td>
+<td>Card access only — IT Manager + Smart Factory Core Team</td>
+<td></td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>Dedicated precision air conditioning (Stulz/APC CRAC unit)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fire suppression</td>
+<td>FM-200 clean agent (server-safe)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="z17-staff-facilities">Z17 — Staff Facilities<a class="headerlink" href="#z17-staff-facilities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zone Code</td>
+<td>Z17</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Zone Name</td>
+<td>Staff Facilities</td>
+<td>Fixed</td>
+</tr>
+<tr>
+<td>Floor area</td>
+<td>~400 m²</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Zone height</td>
+<td>3.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X min</td>
+<td>82.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>X max</td>
+<td>102.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y min</td>
+<td>36.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Y max</td>
+<td>56.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z min</td>
+<td>0.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>Z max</td>
+<td>3.0 m</td>
+<td>Design</td>
+</tr>
+<tr>
+<td>IFC Zone GUID</td>
+<td><code>[IFC-PENDING]</code></td>
+<td><strong>[IFC-PENDING]</strong></td>
+</tr>
+<tr>
+<td>Key features</td>
+<td>Canteen; locker rooms; prayer room; welfare notice board</td>
+<td></td>
+</tr>
+<tr>
+<td>AMR zone designation</td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-zone-summary-table">4. Zone Summary Table<a class="headerlink" href="#4-zone-summary-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Name</th>
+<th>Area (m²)</th>
+<th>Height (m)</th>
+<th>X range (m)</th>
+<th>Y range (m)</th>
+<th>IFC Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z1</td>
+<td>Raw Material &amp; Component Store</td>
+<td>1,500</td>
+<td>9.0</td>
+<td>0–50</td>
+<td>95–125</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z2</td>
+<td>SMT PCB Production</td>
+<td>1,200</td>
+<td>6.0</td>
+<td>50–90</td>
+<td>97–125</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z3</td>
+<td>Sheet Metal Fabrication</td>
+<td>1,000</td>
+<td>9.0</td>
+<td>90–120</td>
+<td>95–125</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z4</td>
+<td>Refrigerator Assembly — Main</td>
+<td>2,200</td>
+<td>9.0</td>
+<td>0–100</td>
+<td>73–95</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z5</td>
+<td>R600a Gas Charging Zone</td>
+<td>600</td>
+<td>6.0</td>
+<td>0–30</td>
+<td>50–70</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z6</td>
+<td>Microwave Oven Assembly</td>
+<td>800</td>
+<td>6.0</td>
+<td>50–86</td>
+<td>50–72</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z7</td>
+<td>Electric Cooker Assembly</td>
+<td>700</td>
+<td>6.0</td>
+<td>86–117</td>
+<td>50–72</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z8</td>
+<td>SDA Assembly Lines A, B, C</td>
+<td>1,800</td>
+<td>6.0</td>
+<td>0–82</td>
+<td>36–58</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z9</td>
+<td>In-Process QC (IPQC)</td>
+<td>600</td>
+<td>5.0</td>
+<td>0–33</td>
+<td>18–36</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z10</td>
+<td>Final QC + OBA</td>
+<td>700</td>
+<td>5.0</td>
+<td>33–73</td>
+<td>18–36</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z11</td>
+<td>Packaging &amp; Labelling</td>
+<td>900</td>
+<td>6.0</td>
+<td>73–120</td>
+<td>18–39</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z12</td>
+<td>Finished Goods Warehouse</td>
+<td>2,200</td>
+<td>9.0</td>
+<td>0–120</td>
+<td>0–18</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z13</td>
+<td>Maintenance Workshop</td>
+<td>400</td>
+<td>5.0</td>
+<td>100–120</td>
+<td>73–93</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z14</td>
+<td>Compressor &amp; Test Services</td>
+<td>400</td>
+<td>5.0</td>
+<td>30–50</td>
+<td>50–70</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z15</td>
+<td>EHS &amp; First Aid</td>
+<td>200</td>
+<td>3.0</td>
+<td>100–120</td>
+<td>93–103</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z16</td>
+<td>IT / MES Server Room</td>
+<td>100</td>
+<td>3.0</td>
+<td>100–110</td>
+<td>103–113</td>
+<td>[IFC-PENDING]</td>
+</tr>
+<tr>
+<td>Z17</td>
+<td>Staff Facilities</td>
+<td>400</td>
+<td>3.0</td>
+<td>82–102</td>
+<td>36–56</td>
+<td>[IFC-PENDING]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-ifc-delivery-update-procedure">5. IFC Delivery &amp; Update Procedure<a class="headerlink" href="#5-ifc-delivery-update-procedure" title="Permanent link">&para;</a></h2>
+<p>Upon receipt of the IFC model file (<code>CCK-EL-KIT-FACTORY-v1.ifc</code>) from the appointed architect:</p>
+<ol>
+<li>Smart Factory Core Team extracts IFC Zone GUIDs for each of the 17 zones.</li>
+<li>Each <code>[IFC-PENDING]</code> field in this document is updated with the exact IFC GUID and precise coordinates (to 3 decimal places).</li>
+<li>Zone boundaries are imported into the Digital Twin spatial model (Unity/UE5 layer).</li>
+<li>AMR navigation system updated with precise zone boundary polygons.</li>
+<li>Document version incremented to 1.1 and committed to this repository.</li>
+</ol>
+<p><strong>IFC Delivery Owner:</strong> Facilities &amp; Engineering Manager
+<strong>Expected:</strong> Q3–Q4 2025 (with architect contract)</p>
+<hr />
+<p><em>For zone descriptions and features, refer to <a href="../../floor-plan/">docs/floor-plan.md</a>.</em>
+<em>For asset locations within zones, refer to <a href="../asset-anchors/">docs/bim/asset-anchors.md</a>.</em>
+<em>For sensor placements within zones, refer to <a href="../../sensor-map/">docs/sensor-map.md</a>.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Coo-Cah Technologies Holdings. All rights reserved. | Part of the Coo-Cah Manufacturing Ecosystem.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/oumar-code/Coo-Kah-Doks" target="_blank" rel="noopener" title="Master Repository — Coo-Kah-Doks" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
