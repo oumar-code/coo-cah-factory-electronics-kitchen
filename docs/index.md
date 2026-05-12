@@ -176,7 +176,7 @@ See [docs/energy-profile.md](./energy-profile.md) for full demand analysis and c
 
 | Document | Description |
 |---|---|
-| [../implementation-plan.md](../implementation-plan.md) | Phase 1 implementation plan: 6 workstreams, gate criteria, risk register |
+| [./implementation-plan.md](./implementation-plan.md) | Phase 1 implementation plan: 6 workstreams, gate criteria, risk register |
 | [gap-closure-report.md](./gap-closure-report.md) | Gate readiness gap tracker: status of all machine-free and machine-required items |
 | [ai-platform-status.md](./ai-platform-status.md) | AI platform: 5 Phase 1 services, stub endpoints, go-live criteria, blockers |
 | [pentest-scoping.md](./pentest-scoping.md) | IT/OT penetration test scope, rules of engagement, Digital Encode Limited |

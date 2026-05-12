@@ -38,7 +38,7 @@ This report tracks all identified documentation and readiness gaps for the Coo-C
 | Machine Required? | ❌ No |
 | Status | ✅ **CLOSED** |
 | Closed Date | 2026-05-12 |
-| Evidence | [`implementation-plan.md`](../implementation-plan.md) — 6 workstreams, 3 gates, risk register complete |
+| Evidence | [`implementation-plan.md`](./implementation-plan.md) — 6 workstreams, 3 gates, risk register complete |
 | Remaining Actions | None |
 
 ---
@@ -262,7 +262,7 @@ These items are out of scope for the machine-free sprint. They are tracked here 
 
 ---
 
-*For implementation milestone details, refer to [implementation-plan.md](../implementation-plan.md).*
+*For implementation milestone details, refer to [implementation-plan.md](./implementation-plan.md).*
 *For zone boundary evidence, refer to [docs/bim/zone-boundaries.md](./bim/zone-boundaries.md).*
 *For asset anchor evidence, refer to [docs/bim/asset-anchors.md](./bim/asset-anchors.md).*
 *For sensor registry evidence, refer to [docs/sensor-map.md](./sensor-map.md).*

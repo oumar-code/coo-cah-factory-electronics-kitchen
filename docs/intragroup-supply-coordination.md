@@ -186,4 +186,4 @@ If Coo-Cah Plastics Factory experiences a supply disruption affecting any housin
 
 *For supply chain BOM details, refer to [docs/supply-chain.md](./supply-chain.md).*
 *For MES API integration (intercompany call-off endpoint), refer to [docs/mes-integration.md](./mes-integration.md).*
-*For implementation gate criteria, refer to [implementation-plan.md](../implementation-plan.md).*
+*For implementation gate criteria, refer to [implementation-plan.md](./implementation-plan.md).*
