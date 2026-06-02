@@ -1,11 +1,13 @@
 site_name: Coo-Cah Kitchen Electronics Factory
 site_description: >
-  Tier 2 Consumer Electronics — Blueprint, operational docs & AI-integration specs for the
-  Coo-Cah Kitchen Electronics Factory (Agbara/Sagamu, Lagos/Ogun State, Nigeria).
-  Manufactures refrigerators, microwaves, electric cookers, blenders & domestic appliances.
+  Blueprint, operational docs & AI-integration specifications for the Coo-Cah Kitchen Electronics
+  Factory (Agbara / Sagamu corridor, Lagos–Ogun axis, Nigeria). Tier 1 Critical Infrastructure
+  — Coo-Cah Technologies Holdings.
+site_author: Coo-Cah Technologies Holdings
 site_url: https://oumar-code.github.io/coo-cah-factory-electronics-kitchen/
-repo_url: https://github.com/oumar-code/coo-cah-factory-electronics-kitchen
+
 repo_name: oumar-code/coo-cah-factory-electronics-kitchen
+repo_url: https://github.com/oumar-code/coo-cah-factory-electronics-kitchen
 edit_uri: edit/main/docs/
 
 theme:
@@ -28,8 +30,8 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - search.highlight
     - search.suggest
+    - search.highlight
     - content.code.copy
     - content.tabs.link
   icon:
@@ -64,35 +66,22 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Master Repo Reference: master-repo-ref.md
-  - Implementation Plan: implementation-plan.md
   - Factory Docs:
     - Machinery & Equipment: machinery.md
     - Energy Profile: energy-profile.md
     - Floor Plan: floor-plan.md
     - Automation Roadmap: automation-roadmap.md
     - Supply Chain: supply-chain.md
-    - Intragroup Supply Coordination: intragroup-supply-coordination.md
     - Regulatory & Compliance: regulatory.md
     - CapEx / OpEx: capex-opex.md
     - Digital Twin: digital-twin.md
     - MES Integration: mes-integration.md
-  - Gate & Implementation Readiness:
-    - Gap Closure Report: gap-closure-report.md
-    - AI Platform Status: ai-platform-status.md
-    - Penetration Test Scoping: pentest-scoping.md
-    - Sensor Registry: sensor-map.md
-    - BIM:
-      - Zone Boundaries: bim/zone-boundaries.md
-      - Asset Anchors: bim/asset-anchors.md
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/oumar-code/Coo-Kah-Doks
       name: Master Repository — Coo-Kah-Doks
-
-extra_css:
-  - stylesheets/extra.css
 
 copyright: >
   © 2025 Coo-Cah Technologies Holdings. All rights reserved. |
