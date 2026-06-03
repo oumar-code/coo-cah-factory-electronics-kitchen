@@ -3,8 +3,8 @@
 > **Project Coo-Cah | AI-Powered Manufacturing Ecosystem**
 > **Factory:** Coo-Cah Kitchen Electronics Factory | **Factory ID:** CCK-EL-KIT
 > **Location:** Agbara Industrial Estate, Lagos State / Sagamu, Ogun State
-> **Document Version:** 1.0 | **Owner:** Supply Chain Manager
-> **Status:** Design Complete — Activation pending factory commissioning
+> **Document Version:** 1.1 | **Owner:** Supply Chain Manager
+> **Status:** Design Complete — Operational sign-off pending
 
 ---
 
@@ -171,7 +171,41 @@ The 4 × CCG-INV-PSW-3kVA inverters destined for Z5 (R600a Gas Charging Zone) mu
 
 ---
 
-## 7. Emergency / Disruption Protocol
+## 7. Operational Sign-Off Pack
+
+The intragroup supply model has moved beyond documentation-only status and is now tracked as **operational sign-off pending**. The purpose of this section is to define the named approver roles, meeting objective, and evidence required before activation.
+
+### 7.1 Named Approvers
+
+| Approval Area | Approver Role |
+|---------------|---------------|
+| Kitchen Electronics operational acceptance | Supply Chain Manager — Kitchen Electronics |
+| Plastics daily supply commitment | Operations Manager — Coo-Cah Plastics Factory |
+| Intercompany commercial confirmation | Group Supply Chain Director |
+| ERP / call-off process confirmation | Group ERP / IT Integration Lead |
+| Quality gate acceptance | QA Manager — Kitchen Electronics |
+
+### 7.2 Sign-Off Meeting
+
+| Item | Detail |
+|------|--------|
+| Meeting Name | Intragroup Supply Activation Review |
+| Target Timing | Mobilisation Sprint — Week 2 |
+| Chair | Group Supply Chain Director |
+| Required Outputs | Agreed approver list, open actions, activation dependencies, next review date |
+| Evidence | Signed minutes or formal action tracker |
+
+### 7.3 Remaining Activation Dependencies
+
+| Dependency | Owner |
+|------------|-------|
+| ERP call-off endpoint readiness | Group ERP / IT Integration Lead |
+| Goods receipt QC workflow confirmation | QA Manager / Stores Lead |
+| Delivery window commitment from Plastics Factory | Operations Manager — Coo-Cah Plastics Factory |
+
+---
+
+## 8. Emergency / Disruption Protocol
 
 If Coo-Cah Plastics Factory experiences a supply disruption affecting any housing component, the following fall-back sequence is activated:
 
@@ -184,6 +218,7 @@ If Coo-Cah Plastics Factory experiences a supply disruption affecting any housin
 
 ---
 
-*For supply chain BOM details, refer to [docs/supply-chain.md](./supply-chain.md).*
-*For MES API integration (intercompany call-off endpoint), refer to [docs/mes-integration.md](./mes-integration.md).*
+*For supply chain BOM details, refer to [supply-chain.md](./supply-chain.md).*
+*For MES API integration (intercompany call-off endpoint), refer to [mes-integration.md](./mes-integration.md).*
 *For implementation gate criteria, refer to [implementation-plan.md](./implementation-plan.md).*
+*For sprint-level supplier readiness tracking, refer to [supplier-qualification-readiness.md](./supplier-qualification-readiness.md).*

@@ -65,6 +65,14 @@ nav:
   - Home: index.md
   - Master Repo Reference: master-repo-ref.md
   - Implementation Plan: implementation-plan.md
+  - Mobilisation Sprint:
+    - Overview: mobilisation-sprint.md
+    - Programme Control Pack: programme-control-pack.md
+    - Regulatory Submission Pack: regulatory-submission-pack.md
+    - Architect & IFC Delivery: architect-ifc-delivery-plan.md
+    - Pentest Kickoff Readiness: pentest-kickoff-readiness.md
+    - Leadership & Governance: leadership-governance-plan.md
+    - Supplier Qualification Readiness: supplier-qualification-readiness.md
   - Factory Docs:
     - Machinery & Equipment: machinery.md
     - Energy Profile: energy-profile.md
