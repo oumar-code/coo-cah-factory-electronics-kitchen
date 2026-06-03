@@ -247,6 +247,31 @@ S10 (Pentest executed) ─► S11 (AI platform production go-live) ─► G3
 
 ---
 
+## 8. Two-Week Mobilisation Sprint Companion Documents
+
+To accelerate execution on the unblocked Gate 1 and immediate pre-Gate 2 items, the programme uses a dedicated mobilisation sprint focused on regulatory packs, architect / IFC enablement, pentest readiness, governance, supplier qualification, and live control tracking.
+
+| Sprint Work Package | Companion Document |
+|---------------------|--------------------|
+| Sprint objectives and sequencing | [`mobilisation-sprint.md`](./mobilisation-sprint.md) |
+| Master tracker and executive dashboard | [`programme-control-pack.md`](./programme-control-pack.md) |
+| NIPC + NESREA submission readiness | [`regulatory-submission-pack.md`](./regulatory-submission-pack.md) |
+| Architect appointment and IFC delivery | [`architect-ifc-delivery-plan.md`](./architect-ifc-delivery-plan.md) |
+| Pentest kickoff and staging readiness | [`pentest-kickoff-readiness.md`](./pentest-kickoff-readiness.md) |
+| Leadership and governance cadence | [`leadership-governance-plan.md`](./leadership-governance-plan.md) |
+| ASL and supplier qualification readiness | [`supplier-qualification-readiness.md`](./supplier-qualification-readiness.md) |
+
+### Deferred During the Mobilisation Sprint
+
+The following remain intentionally deferred during the sprint:
+
+- AI platform production go-live
+- Full BIM population beyond architect / IFC enablement
+- Full MES commissioning registry
+- Machine-dependent commissioning work
+
+---
+
 *For factory layout and zone details, refer to [floor-plan.md](./floor-plan.md).*
 *For supply chain and intragroup links, refer to [supply-chain.md](./supply-chain.md).*
 *For gap closure tracking, refer to [gap-closure-report.md](./gap-closure-report.md).*

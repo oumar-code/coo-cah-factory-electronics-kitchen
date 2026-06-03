@@ -177,6 +177,13 @@ See [docs/energy-profile.md](./energy-profile.md) for full demand analysis and c
 | Document | Description |
 |---|---|
 | [./implementation-plan.md](./implementation-plan.md) | Phase 1 implementation plan: 6 workstreams, gate criteria, risk register |
+| [mobilisation-sprint.md](./mobilisation-sprint.md) | Two-week execution sprint for Gate 1 close-out and immediate pre-Gate 2 priorities |
+| [programme-control-pack.md](./programme-control-pack.md) | Master tracker, critical-path controls, decision log, and weekly executive dashboard |
+| [regulatory-submission-pack.md](./regulatory-submission-pack.md) | NIPC Pioneer Status and NESREA EIA submission readiness pack |
+| [architect-ifc-delivery-plan.md](./architect-ifc-delivery-plan.md) | Architect shortlist, IFC contractual requirements, and down-selection criteria |
+| [pentest-kickoff-readiness.md](./pentest-kickoff-readiness.md) | Pentest kickoff, readiness checklist, and pre-engagement controls |
+| [leadership-governance-plan.md](./leadership-governance-plan.md) | Leadership priority slate, governance cadence, and escalation model |
+| [supplier-qualification-readiness.md](./supplier-qualification-readiness.md) | ASL qualification gates, evidence model, and critical supplier prioritisation |
 | [gap-closure-report.md](./gap-closure-report.md) | Gate readiness gap tracker: status of all machine-free and machine-required items |
 | [ai-platform-status.md](./ai-platform-status.md) | AI platform: 5 Phase 1 services, stub endpoints, go-live criteria, blockers |
 | [pentest-scoping.md](./pentest-scoping.md) | IT/OT penetration test scope, rules of engagement, Digital Encode Limited |
